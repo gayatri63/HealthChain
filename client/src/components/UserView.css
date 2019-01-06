@@ -1,0 +1,28 @@
+
+.JTD{
+    text-align: left;
+    font-size: 18px;
+}
+
+.JTE{
+    font-weight: bold;
+}
+
+.name{
+    font-size: 35px;
+}
+
+.jumbotron{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #383838 !important;
+    color: white !important;
+}
+
+.myChart{
+    margin-left: 60%;
+}
+
+.history{
+    background-color: whitesmoke !important;
+}

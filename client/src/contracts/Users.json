@@ -1,0 +1,525 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_prescriptionid",
+        "type": "uint256"
+      },
+      {
+        "name": "_drugname",
+        "type": "string"
+      },
+      {
+        "name": "_count",
+        "type": "uint256"
+      }
+    ],
+    "name": "setDrug",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_patientAddress",
+        "type": "address"
+      },
+      {
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "name": "_age",
+        "type": "uint256"
+      },
+      {
+        "name": "_contact",
+        "type": "uint256"
+      },
+      {
+        "name": "_userAddress",
+        "type": "string"
+      }
+    ],
+    "name": "setPatient",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_healthCareAddress",
+        "type": "address"
+      },
+      {
+        "name": "_timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "setPrescription",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_chainAddress",
+        "type": "address"
+      },
+      {
+        "name": "_timestamp",
+        "type": "uint256"
+      },
+      {
+        "name": "_totalcost",
+        "type": "uint256"
+      }
+    ],
+    "name": "setReceipt",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_chainAddress",
+        "type": "address"
+      },
+      {
+        "name": "_timestamp",
+        "type": "uint256"
+      },
+      {
+        "name": "_disease",
+        "type": "string"
+      }
+    ],
+    "name": "setRecord",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "patientid",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "patientAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "age",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "contact",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "userAddress",
+        "type": "string"
+      }
+    ],
+    "name": "addPatient",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "prescriptionid",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "healthCareAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "addPrescription",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "recordid",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "disease",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "chainAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "addRecord",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "receiptid",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "chainAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "totalcost",
+        "type": "uint256"
+      }
+    ],
+    "name": "addReceipt",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "drugid",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "drugname",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "count",
+        "type": "uint256"
+      }
+    ],
+    "name": "addDrug",
+    "type": "event"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_prescriptionid",
+        "type": "uint256"
+      },
+      {
+        "name": "_receiptid",
+        "type": "uint256"
+      },
+      {
+        "name": "_drugid",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDrug",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPatient",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPatientCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_prescriptionid",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPrescription",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_receiptid",
+        "type": "uint256"
+      }
+    ],
+    "name": "getReceipt",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "_recordid",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRecord",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "patientCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "patients",
+    "outputs": [
+      {
+        "name": "patientid",
+        "type": "uint256"
+      },
+      {
+        "name": "patientAddress",
+        "type": "address"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "uint256"
+      },
+      {
+        "name": "contact",
+        "type": "uint256"
+      },
+      {
+        "name": "userAddress",
+        "type": "string"
+      },
+      {
+        "name": "prescriptionCount",
+        "type": "uint256"
+      },
+      {
+        "name": "receiptCount",
+        "type": "uint256"
+      },
+      {
+        "name": "recordCount",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

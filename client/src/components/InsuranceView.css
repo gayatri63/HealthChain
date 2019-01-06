@@ -1,0 +1,24 @@
+
+.JTD{
+    text-align: left;
+    font-size: 18px;
+}
+
+.JTE{
+    font-weight: bold;
+}
+
+.name{
+    font-size: 35px;
+}
+
+.jumbotron{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #383838 !important;
+    color: white !important;
+}
+
+.receipt{
+    margin-top: 20px;
+}
